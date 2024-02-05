@@ -1,16 +1,17 @@
-import "./App.css";
-import Child from "./Components/Child";
+import React from "react";
+import Copyright from "./Components/Copyright";
+import InspirationGenerator from "./Components/InspirationGenerator.jsx";
+import FancyText from "./Components/FancyText";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <h1>Spiced Chai Recipe</h1>
-      <h3>for two</h3>
-      <Child key={Child} water={2} />
-      <h3>for four</h3>
-      <Child key={Child} water={4} />
-    </>
+    <div>
+      <FancyText title text="Get Inspired App" />
+      <InspirationGenerator>
+        <Copyright year={2004} />
+      </InspirationGenerator>
+    </div>
   );
-}
+};
 
 export default App;
